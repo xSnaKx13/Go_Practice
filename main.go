@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func main() {
-   var variable int
-   fmt.Scan(&variable)
-   
-   slice := make([]int, variable)
-   var value int
-   for i := 0; i < variable; i++{
-      fmt.Scan(&value)
-      slice[i] = value
+   array := [5]int{}
+   max := 0
+   for i := 0; i < 5; i++ {
+      fmt.Scan(&array[i])
+      if array[i] > max{
+         max = array[i]
+      }
    }
-   fmt.Print(slice[3])
+   fmt.Print(max)
 }
