@@ -6,10 +6,10 @@ func main() {
    var a,b,c int
    fmt.Scan(&a,&b,&c)
 
-   if a*a+b*b==c*c {
-      fmt.Print("Прямоугольный")
+   if a+b>c||a+c>b||b+c>a{
+      fmt.Print("Существует")
    }else{
-      fmt.Print("Непрямоугольный")
+      fmt.Print("Не существует")
    }
 }
    
