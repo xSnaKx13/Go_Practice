@@ -5,17 +5,12 @@ import "fmt"
 func main() {
    var variable int
    fmt.Scan(&variable)
-   arr := make([]int, variable)
 
-   for i := 0; i < variable; i++ {
-      fmt.Scan(&arr[i])
-   }
+   number1 := variable / 100
+   number2 := (variable / 10) % 10
+   number3 := variable % 10
 
-   for idx, elem := range arr{
-      if idx % 2 == 0 || idx == 0{
-         fmt.Print(elem, " ")
-      }
-   }
-   dude()
+   sumNumbers := number1 + number2 + number3
+   fmt.Print(sumNumbers, " ")
 }
    
