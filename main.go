@@ -3,13 +3,18 @@ package main
 import "fmt"
 
 func main() {
-   array := [5]int{}
-   max := 0
-   for i := 0; i < 5; i++ {
-      fmt.Scan(&array[i])
-      if array[i] > max{
-         max = array[i]
+   var variable int
+   fmt.Scan(&variable)
+   arr := make([]int, variable)
+
+   for i := 0; i < variable; i++ {
+      fmt.Scan(&arr[i])
+   }
+
+   for idx, elem := range arr{
+      if arr[idx] % 2 == 0{
+         fmt.Println(arr[elem])
       }
    }
-   fmt.Print(max)
 }
+   
