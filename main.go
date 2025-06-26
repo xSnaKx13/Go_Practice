@@ -10,7 +10,7 @@ func main() {
    number2 := (variable / 10) % 10
    number3 := variable % 10
 
-   sumNumbers := number1 + number2 + number3
-   fmt.Print(sumNumbers, " ")
+   numbers := fmt.Sprintf("%d%d%d", number3, number2, number1)
+   fmt.Print(numbers)
 }
    
