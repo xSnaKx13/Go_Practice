@@ -12,8 +12,8 @@ func main() {
    }
 
    for idx, elem := range arr{
-      if idx % 2 == 0{
-         fmt.Println(elem)
+      if idx % 2 == 0 || idx == 0{
+         fmt.Print(elem, " ")
       }
    }
 }
