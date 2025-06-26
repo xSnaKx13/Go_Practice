@@ -16,5 +16,6 @@ func main() {
          fmt.Print(elem, " ")
       }
    }
+   dude()
 }
    
