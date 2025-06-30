@@ -3,10 +3,16 @@ package main
 import "fmt"
 
 func main() {
-   var a,b,numb float64
-   fmt.Scan(&a,&b)
-
-   numb = (a+b)/2
-   fmt.Println(numb)
+   var numbers []int
+   var nCount int
+   fmt.Scan(&nCount)
+   zeroCount := 0
+   for i := 0; i < nCount; i++ {
+      fmt.Scan(&numbers[i])
+      if numbers[i] == 0 {
+         zeroCount++
+      }
+   }
+   fmt.Print(zeroCount)
 }
    
