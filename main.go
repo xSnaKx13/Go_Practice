@@ -3,13 +3,10 @@ package main
 import "fmt"
 
 func main() {
-   var a,b,c int
-   fmt.Scan(&a,&b,&c)
+   var a,b,numb float64
+   fmt.Scan(&a,&b)
 
-   if a+b>c&&a+c>b&&b+c>a{
-      fmt.Print("Существует")
-   }else{
-      fmt.Print("Не существует")
-   }
+   numb = (a+b)/2
+   fmt.Println(numb)
 }
    
