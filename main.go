@@ -14,7 +14,11 @@ func main() {
       }
       number /= 10
    }
-   fmt.Print(testNum)
-   
+   fmt.Print(testNum, "\n")
+   var reverse string
+   for i := len(testNum)-1; i >=0; i-- {
+      reverse += string(testNum[i])
+   }
+   fmt.Print(reverse)
 }
    
