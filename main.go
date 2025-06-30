@@ -11,8 +11,10 @@ func main() {
       digit := number % 10
       sumNumbers += digit
       number /= 10
-      
    }
-   fmt.Print(sumNumbers)
+   firstNumber := sumNumbers%10
+   secondNumber := sumNumbers/10
+   digitalRoot := firstNumber + secondNumber
+   fmt.Print(digitalRoot)
 }
    
