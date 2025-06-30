@@ -3,18 +3,16 @@ package main
 import "fmt"
 
 func main() {
-   var nCount int
-   fmt.Scan(&nCount)
-   zeroCount := 0
+   var number int
+   fmt.Scan(&number)
+   sumNumbers := 0
 
-   var numbers = make([]int, nCount)
-
-   for i := 0; i < nCount; i++ {
-      fmt.Scan(&numbers[i])
-      if numbers[i] == 0 {
-         zeroCount++
-      }
+   for number > 0{
+      digit := number % 10
+      sumNumbers += digit
+      number /= 10
+      
    }
-   fmt.Print(zeroCount)
+   fmt.Print(sumNumbers)
 }
    
