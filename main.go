@@ -5,16 +5,16 @@ import "fmt"
 func main() {
    var number int
    fmt.Scan(&number)
-   sumNumbers := 0
+   var testNum string
 
    for number > 0{
-      digit := number % 10
-      sumNumbers += digit
+      digit := number%10
+      if digit != 7{
+         testNum += fmt.Sprintf("%d", digit)
+      }
       number /= 10
    }
-   firstNumber := sumNumbers%10
-   secondNumber := sumNumbers/10
-   digitalRoot := firstNumber + secondNumber
-   fmt.Print(digitalRoot)
+   fmt.Print(testNum)
+   
 }
    
