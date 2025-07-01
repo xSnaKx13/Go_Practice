@@ -11,6 +11,8 @@ func main() {
    for i := firstNumber; i < secondNumber; i++ {
       if i % 7 == 0{
          result = i
+      }else{
+         fmt.Print("NO")
       }
    }
    fmt.Print(result)
