@@ -6,13 +6,14 @@ func main() {
    var firstNumber, secondNumber int
    fmt.Scan(&firstNumber, &secondNumber)
 
-   var result int
+   var result string
 
-   for i := firstNumber; i < secondNumber; i++ {
+   for i := secondNumber; i > firstNumber; i-- {
       if i % 7 == 0{
-         result = i
+         result = fmt.Sprintf("%d", i)
+         break
       }else{
-         fmt.Print("NO")
+         result = "NO"
       }
    }
    fmt.Print(result)
