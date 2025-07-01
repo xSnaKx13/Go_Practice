@@ -8,7 +8,7 @@ func main() {
 
    var result string
 
-   for i := secondNumber; i > firstNumber; i-- {
+   for i := secondNumber; i >= firstNumber; i-- {
       if i % 7 == 0{
          result = fmt.Sprintf("%d", i)
          break
