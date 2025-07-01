@@ -5,7 +5,10 @@ import "fmt"
 func main() {
    var numb int
    fmt.Scan(&numb)
-
+   if numb%100 >= 11 && numb%100 <=14{
+      fmt.Printf("%d korov", numb)
+      return
+   }
    cowCount := numb % 10
 
    switch cowCount{
