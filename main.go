@@ -3,14 +3,19 @@ package main
 import "fmt"
 
 func main() {
-   n := 273
-   k := n % 10
-   var res int
-   switch res{
-   case k == 1:
-      fmt.Print("корова")
-   case k == 2:
-      fmt.Print("коровы")
+   var numb int
+   fmt.Scan(&numb)
+
+   cowCount := numb % 10
+
+   switch cowCount{
+   case 1:
+      fmt.Printf("%d korova", numb)
+   case 2, 3, 4:
+      fmt.Printf("%d korovy", numb)
+   case 0, 5, 6, 7, 8, 9:
+      fmt.Printf("%d korov", numb)
    }
+
 }
    
