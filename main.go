@@ -3,19 +3,14 @@ package main
 import "fmt"
 
 func main() {
-   var firstNumber, secondNumber int
-   fmt.Scan(&firstNumber, &secondNumber)
-
-   var result string
-
-   for i := secondNumber; i >= firstNumber; i-- {
-      if i % 7 == 0{
-         result = fmt.Sprintf("%d", i)
-         break
-      }else{
-         result = "NO"
-      }
+   n := 273
+   k := n % 10
+   var res int
+   switch res{
+   case k == 1:
+      fmt.Print("корова")
+   case k == 2:
+      fmt.Print("коровы")
    }
-   fmt.Print(result)
 }
    
