@@ -5,31 +5,17 @@ import (
 )
 
 func main() {
+   var firstNumb, secondNumb int
+   fmt.Scan(&firstNumb,&secondNumb)
 
-   var numb int
-   fmt.Scan(&numb)
-   a, b := 0,1
-   c, count := 0,1
+   slice := make([]int, firstNumb)
+   slice2 := make([]int, secondNumb)
 
-   for {
-      c = b + a
-      count++
-      if c == numb{
-         fmt.Println(count)
-         break
-      }
-      a = c + b
-      count++
-      if a == numb{
-         fmt.Println(count)
-         break
-      }
-      b = a + c
-      count++
-      if b == numb{
-         fmt.Println(count)
-         break
-      }
+   for i := 0; i < len(slice); i++ {
+      fmt.Println(slice[i])
+   }
+   for i := 0; i < len(slice2); i++ {
+      fmt.Println(slice2[i])
    }
 }
    
