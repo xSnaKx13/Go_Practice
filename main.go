@@ -9,7 +9,7 @@ func main() {
    var numb int
    fmt.Scan(&numb)
    a, b := 0,1
-   var c, count int
+   c, count := 0,1
 
    for {
       c = b + a
