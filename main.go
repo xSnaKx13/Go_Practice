@@ -10,7 +10,14 @@ func main(){
 
    var nums []int
 
-   nums = append(nums, a)
+   for {
+      value := a % 10
+      nums = append(nums, value)
+      value /= 10
+      if value == 0{
+         break
+      }
+   }
 
-   fmt.Print(nums)
+   fmt.Print(nums, " ")
 }
