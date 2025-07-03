@@ -29,6 +29,7 @@ func main() {
             }
             if !isDublicate{
                result += string(numb[i])
+               result += " "
             }
          }
       }
