@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-   a := 73081
-   b := 650
+   a := 730570
+   b := 65095
    var result string
 
    numb := fmt.Sprintf("%d", a)
@@ -16,7 +16,12 @@ func main() {
 
    for i:=0; i<len(numb);i++{
       for k:=0; k<len(numb2);k++{
-         if string(numb[i]) == string(numb2[k]){
+         if numb[i] == numb2[k]{
+            for j := 0; j<len(result); i++{
+               if numb[i] == result[j]{
+                  continue
+               }
+            }
             result += string(numb[i])
          }
       }
