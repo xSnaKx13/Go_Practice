@@ -10,14 +10,15 @@ func main(){
 
    var nums []int
 
-   for {
+   for a != 0 {
       value := a % 10
       nums = append(nums, value)
-      value /= 10
-      if value == 0{
-         break
-      }
+      a /= 10
    }
 
-   fmt.Print(nums, " ")
+   fmt.Println(nums, " ")
+
+   for i := len(nums); i > len(nums); i-- {
+      fmt.Println(nums[i])
+   }
 }
