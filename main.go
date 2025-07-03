@@ -5,28 +5,33 @@ import (
 )
 
 func main() {
-   a := 730570
-   b := 65095
-   var result string
+   var firstNumber int
+   var secondNumber int
 
-   numb := fmt.Sprintf("%d", a)
-   numb2 := fmt.Sprintf("%d", b)
+   fmt.Scan(&firstNumber, &secondNumber)
+
+   var result string
+   isDublicate := false
+
+   numb := fmt.Sprintf("%d", firstNumber)
+   numb2 := fmt.Sprintf("%d", secondNumber)
 
    fmt.Println(numb, " ", numb2)
 
    for i:=0; i<len(numb);i++{
       for k:=0; k<len(numb2);k++{
          if numb[i] == numb2[k]{
-            for j := 0; j<len(result); i++{
+            for j := 0; j<len(result); j++{
                if numb[i] == result[j]{
-                  continue
+                  isDublicate = true
+                  break
                }
             }
-            result += string(numb[i])
+            if !isDublicate{
+               result += string(numb[i])
+            }
          }
       }
    }
-   fmt.Printf(result)
-
+   fmt.Print(result)
 }
-   
