@@ -33,8 +33,12 @@ func main(){
 
    for i := 0; i < len(nums); i++ {
       for j := 0; j < len(nums2); j++ {
-         if nums[i] == nums2[j] {
-            dublicateNums = append(dublicateNums, nums[i])
+         for k := 0; k < len(dublicateNums); k++ {
+            if nums[i] == nums2[i]{
+               if dublicateNums[k]!= nums[i] {
+                  dublicateNums = append(dublicateNums, nums[i])
+               }
+            }
          }
       }
    }
