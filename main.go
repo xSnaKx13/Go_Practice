@@ -23,9 +23,13 @@ func main(){
       nums2 = append(nums2, value)
       b /= 10
    }
-
-   fmt.Println(nums, " ")
-   fmt.Println(nums2, " ")
+   for i := len(nums)-1; i >= 0; i-- {
+      fmt.Print(nums[i])
+   }
+   fmt.Print(" ")
+   for i := len(nums2)-1; i >= 0; i-- {
+      fmt.Print(nums2[i])
+   }
 
    for i := 0; i < len(nums); i++ {
       for j := 0; j < len(nums2); j++ {
@@ -34,6 +38,7 @@ func main(){
          }
       }
    }
+   fmt.Println()
    for i := len(dublicateNums)-1; i >= 0; i-- {
       fmt.Print(dublicateNums[i], " ")
    }
