@@ -33,11 +33,16 @@ func main(){
 
    for i := 0; i < len(nums); i++ {
       for j := 0; j < len(nums2); j++ {
-         for k := 0; k < len(dublicateNums); k++ {
-            if nums[i] == nums2[i]{
-               if dublicateNums[k]!= nums[i] {
-                  dublicateNums = append(dublicateNums, nums[i])
+         isDublicateValues := false
+         if nums[i] == nums2[j]{
+            for k := 0; k < len(dublicateNums); k++ {
+               if nums[i] == dublicateNums[k]{
+                  isDublicateValues = true
+                  break
                }
+            }
+            if !isDublicateValues{
+               dublicateNums = append(dublicateNums, nums[i])
             }
          }
       }
