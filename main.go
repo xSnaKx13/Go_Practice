@@ -1,23 +1,22 @@
 package main
 
 import (
-	"fmt"
+   "fmt"
 )
 
 func main(){
-   minimumFromFour()
+   vote(5,0,5)
 }
-func minimumFromFour() int{
-   var minValue int
-   var number int
-   fmt.Scan(&number)
-   minValue = number
-   for i := 1; i < 4; i++ {
-      fmt.Scan(&number)
-      if number < minValue{
-         minValue = number
-      }
+func vote(x,y,z int) int{
+   result := 0
+   switch {
+   case x == y || x == z:
+      result = x
+   case y == x || y == z:
+      result = y
+   case z == x || z == y:
+      result = z
    }
-   fmt.Print(minValue)
-   return minValue
+   fmt.Print(result)
+   return result
 }
