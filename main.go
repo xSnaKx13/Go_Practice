@@ -5,12 +5,14 @@ import (
 )
 
 func main(){
-   test()
+   sumInt(10,2,4,1,3,1,80,1)
 }
-func test(){
-   foo := []interface{}{}
-   for i := 0; foo[i] !=34; i++ {
-      fmt.Scan(&foo[i])
+func sumInt(numbers...int){
+   var result int
+   var countParametrs int
+   for _, elem := range numbers{
+      countParametrs++
+      result += elem
    }
-   fmt.Print(foo...)
+   fmt.Print(countParametrs, " ", result)
 }
