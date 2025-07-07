@@ -5,18 +5,35 @@ import (
 )
 
 func main(){
-   vote(5,0,5)
+   fibonacci(21)
 }
-func vote(x,y,z int) int{
-   result := 0
-   switch {
-   case x == y || x == z:
-      result = x
-   case y == x || y == z:
-      result = y
-   case z == x || z == y:
-      result = z
+func fibonacci(n int) int{
+   var count int = 2
+   var a int = 1
+   var b int = 1
+   var c int
+   var value int
+
+   for {
+      c = b + a
+      count++
+      if count == n{
+         value = c
+         break
+      }
+      a = c + b
+      count++
+      if count == n{
+         value = a
+         break
+      }
+      b = a + c
+      count++
+      if count == n{
+         value = b
+         break
+      }
    }
-   fmt.Print(result)
-   return result
+   fmt.Print(value)
+   return value
 }
