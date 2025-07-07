@@ -5,7 +5,7 @@ import (
 )
 
 func main(){
-   fibonacci(21)
+   fibonacci(2)
 }
 func fibonacci(n int) int{
    var count int = 2
@@ -15,6 +15,10 @@ func fibonacci(n int) int{
    var value int
 
    for {
+      if n <= count{
+         value = 1
+         break
+      }
       c = b + a
       count++
       if count == n{
