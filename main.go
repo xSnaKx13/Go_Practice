@@ -5,15 +5,12 @@ import (
 )
 
 func main(){
-   fibonacci(5)
+   test()
 }
-func fibonacci(n int) int{
-   fib := []int{0,1}
-   for i := 0; i <= n; i++ {
-      if i>=2{
-      fib = append(fib, (fib[i-1]+fib[i-2]))
-      }
+func test(){
+   foo := []interface{}{}
+   for i := 0; foo[i] !=34; i++ {
+      fmt.Scan(&foo[i])
    }
-   fmt.Print(fib[n])
-   return fib[n]
+   fmt.Print(foo...)
 }
