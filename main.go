@@ -4,15 +4,40 @@ import (
 	"fmt"
 )
 
-func main(){
-   sumInt(10,2,4,1,3,1,80,1)
+type Cars struct{
+  _brand string
+  _model string
+  _horsePower float64
+  _yearRealize int
 }
-func sumInt(numbers...int){
-   var result int
-   var countParametrs int
-   for _, elem := range numbers{
-      countParametrs++
-      result += elem
-   }
-   fmt.Print(countParametrs, " ", result)
+
+func NewCar(
+  brand string,
+  model string,
+  horsePower float64,
+  yearRealize int,
+) Cars {
+  if brand == "" {
+    return Cars{}
+  }
+  if model == "" {
+    return Cars{}
+  }
+  if horsePower < 70 || horsePower > 560 {
+    return Cars{}
+  }
+  if yearRealize < 1990 || yearRealize > 2025{
+    return Cars{}
+  }
+  return Cars{
+    _brand: brand,
+    _model: model,
+    _horsePower: horsePower,
+    _yearRealize: yearRealize,
+  }
+}
+
+func main(){
+  audi := NewCar("audi", "a4", 129.0, 2021)
+  fmt.Println(audi)
 }
