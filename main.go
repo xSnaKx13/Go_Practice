@@ -1,16 +1,24 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strings"
+	"unicode"
 )
 
 func main(){
-  str := "правило никто не отменял!"
+  input, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+  input = strings.TrimSpace(input)
 
-  lastS := []rune(str)[len(str)]
-  if lastS == '!'{
-    fmt.Println("да")
+  inputRune := []rune(input)
+  inputFirstRune := []rune(input)[0]
+  inputLastRune := inputRune[len(inputRune)-1]
+
+  if unicode.IsUpper(inputFirstRune) && inputLastRune == '.'{
+    fmt.Println("Right")
   }else{
-    fmt.Println("нет")
+    fmt.Println("Wrong")
   }
 }
