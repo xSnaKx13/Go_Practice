@@ -11,7 +11,15 @@ func main(){
   input,_ := bufio.NewReader(os.Stdin).ReadString('\n')
   input = strings.TrimSpace(input)
 
-  for i := len(input)-1; i > 0; i-- {
-    fmt.Printf("%s", input[i])
+  word := []rune(input)
+  var drow string
+
+  for i := len(word) - 1; i >= 0; i-- {
+    drow += string(word[i])
+  }
+  if input == drow{
+    fmt.Print("полиндром")
+  }else{
+    fmt.Print("нет")
   }
 }
