@@ -5,20 +5,13 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"unicode"
 )
 
 func main(){
-  input, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+  input,_ := bufio.NewReader(os.Stdin).ReadString('\n')
   input = strings.TrimSpace(input)
 
-  inputRune := []rune(input)
-  inputFirstRune := []rune(input)[0]
-  inputLastRune := inputRune[len(inputRune)-1]
-
-  if unicode.IsUpper(inputFirstRune) && inputLastRune == '.'{
-    fmt.Println("Right")
-  }else{
-    fmt.Println("Wrong")
+  for i := len(input)-1; i > 0; i-- {
+    fmt.Printf("%s", input[i])
   }
 }
