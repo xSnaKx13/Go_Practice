@@ -18,8 +18,8 @@ func main(){
     drow += string(word[i])
   }
   if input == drow{
-    fmt.Print("полиндром")
+    fmt.Print("Палиндром")
   }else{
-    fmt.Print("нет")
+    fmt.Print("Нет")
   }
 }
