@@ -5,17 +5,16 @@ import (
 )
 
 func main(){
-  
-
+  devide(10,2)
 }
 
-func devide(a,b int) (resilt int){
+func devide(a,b int) (int, error){
   fmt.Println("Введите два целых числа:")
-  _,err := fmt.Scan(&a, &b)
-  if err != nil{
-    fmt.Println("Введено некоректное знаяение")
+  _,error := fmt.Scan(&a, &b)
+  if error != nil{
+    error = fmt.Println("ошибка")
   }else{
-    result = a / b
+    devide(a, b)
   }
-  return result
+  return error, a/b
 }
