@@ -14,12 +14,16 @@ func main(){
   }
 
   res, err := devide(a, b)
-  fmt.Println(res)
+  if res != 0{
+    fmt.Println(res)
+  }else{
+    fmt.Println(err)
+  }
 }
 
 func devide(a,b int) (int, error){
   if a == 0 || b == 0{
     return 0, errors.New("ошибка")
   }
-  return a/b, nil
+  return a/b, errors.New("ошибка ")
 }
