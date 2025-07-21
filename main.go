@@ -1,8 +1,8 @@
 package main
 
 import (
-	"errors"
 	"fmt"
+	"math"
 )
 
 func main(){
@@ -12,18 +12,13 @@ func main(){
     fmt.Println("ошибка")
     return
   }
-
-  res, err := devide(a, b)
-  if res != 0{
-    fmt.Println(res)
-  }else{
-    fmt.Println(err)
-  }
+  hypotenuse(a, b)
 }
-
-func devide(a,b int) (int, error){
-  if a == 0 || b == 0{
-    return 0, errors.New("ошибка")
-  }
-  return a/b, errors.New("ошибка ")
+func hypotenuse(a,b int)int{
+    squareA := a * a
+    squareB := b * b
+    sumAB := squareA + squareB
+    hptnse := math.Sqrt(float64(sumAB))
+    fmt.Println(int(hptnse))
+    return int(hptnse)
 }
