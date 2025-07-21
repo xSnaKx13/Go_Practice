@@ -1,25 +1,21 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strings"
 )
 
 func main(){
-  input,_ := bufio.NewReader(os.Stdin).ReadString('\n')
-  input = strings.TrimSpace(input)
+  
 
-  word := []rune(input)
-  var drow string
+}
 
-  for i := len(word) - 1; i >= 0; i-- {
-    drow += string(word[i])
-  }
-  if input == drow{
-    fmt.Print("Палиндром")
+func devide(a,b int) (resilt int){
+  fmt.Println("Введите два целых числа:")
+  _,err := fmt.Scan(&a, &b)
+  if err != nil{
+    fmt.Println("Введено некоректное знаяение")
   }else{
-    fmt.Print("Нет")
+    result = a / b
   }
+  return result
 }
