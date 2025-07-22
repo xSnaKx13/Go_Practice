@@ -13,12 +13,16 @@ func main(){
   input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
   input = strings.TrimSpace(input)
 
-  number, _ := strconv.Atoi(input)
-  var sliceNums []int 
-
-  for number >= 0{
-    s := number % 10
-    sliceNums = append(sliceNums, s)
+  var numbers[] int
+  for i := 0; i < len(input); i++ {
+    s, _:= strconv.Atoi(string(input[i]))
+    numbers = append(numbers, s)
   }
-  fmt.Print(sliceNums)
+  var maxNumber int = 0
+  for _, elem := range numbers {
+    if elem > maxNumber{
+      maxNumber = elem
+    }
+  }
+  fmt.Println(maxNumber)
 }
