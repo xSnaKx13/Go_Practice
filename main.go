@@ -1,25 +1,15 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
+import "fmt"
 
 func main(){
-  var input string
-  input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
-  input = strings.TrimSpace(input)
-  numbers := []rune(input)
-  
-  var numsRes[] int
-  for _, elem := range numbers{
-    digit := (elem - '0')
-    sqr := digit * digit
-    numsRes = append(numsRes, int(sqr))
-  }
-  for _, elem := range numsRes{
-    fmt.Print(elem)
-  }
+  v := 5
+  p := &v
+  fmt.Print(*p, " ")
+  changePointer(p)
+  fmt.Print(*p)
+}
+func changePointer(p *int){
+  v := 3
+  p = &v
 }
