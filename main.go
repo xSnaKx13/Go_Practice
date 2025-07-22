@@ -4,18 +4,19 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
+	"strconv"
 )
 
 func main(){
   var input string
-  input, err := bufio.NewReader(os.Stdin).ReadString(('\n'))
-  input = strings.TrimSpace(input)
-  if err != nil{
-    fmt.Println("ошибка")
-    return
+  input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
+
+  number, _ := strconv.Atoi(input)
+  var sliceNumbs[] int
+
+  for i := len(input)-1; i > 0; i-- {
+    s := number % 10
+    sliceNumbs = append(sliceNumbs, s)
   }
-  newString := strings.Split(input, "")
-  result := strings.Join(newString, "*")
-  fmt.Println(result)
+  fmt.Println(sliceNumbs)
 }
