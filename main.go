@@ -15,8 +15,11 @@ func main(){
   
   var numsRes[] int
   for _, elem := range numbers{
-    sqr := elem * elem
+    digit := (elem - '0')
+    sqr := digit * digit
     numsRes = append(numsRes, int(sqr))
   }
-  fmt.Print(numsRes)
+  for _, elem := range numsRes{
+    fmt.Print(elem)
+  }
 }
