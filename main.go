@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"slices"
 	"strings"
 )
 
@@ -13,5 +12,11 @@ func main(){
   input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
   input = strings.TrimSpace(input)
   numbers := []rune(input)
-  fmt.Println(string(slices.Max(numbers)))
+  
+  var numsRes[] int
+  for _, elem := range numbers{
+    sqr := elem * elem
+    numsRes = append(numsRes, int(sqr))
+  }
+  fmt.Print(numsRes)
 }
