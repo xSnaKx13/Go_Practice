@@ -5,18 +5,20 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func main(){
   var input string
   input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
+  input = strings.TrimSpace(input)
 
   number, _ := strconv.Atoi(input)
-  var sliceNumbs[] int
+  var sliceNums []int 
 
-  for i := len(input)-1; i > 0; i-- {
+  for number >= 0{
     s := number % 10
-    sliceNumbs = append(sliceNumbs, s)
+    sliceNums = append(sliceNums, s)
   }
-  fmt.Println(sliceNumbs)
+  fmt.Print(sliceNums)
 }
