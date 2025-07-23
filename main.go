@@ -5,11 +5,12 @@ import "fmt"
 func main(){
   v := 5
   p := &v
+  
   fmt.Print(*p, " ")
   changePointer(p)
-  fmt.Print(*p)
+  fmt.Println(v)
 }
-func changePointer(p *int){
+func changePointer(j *int){
   v := 3
-  p = &v
+  j = &v
 }
