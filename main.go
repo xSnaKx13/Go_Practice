@@ -1,10 +1,15 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "math"
+)
 
 func main(){
-  var weight float64 
+  var weight float64
   var height float64 
-  fmt.Print("введите свой вес: ")
   fmt.Scan(&weight)
+  fmt.Scan(&height)
+  IMT := weight / math.Pow(height, 2)
+  fmt.Println(IMT)
 }
