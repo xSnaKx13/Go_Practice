@@ -9,6 +9,7 @@ func main(){
   fmt.Print(*p, " ")
   changePointer(p)
   fmt.Println(v)
+  fmt.Println("testttt")
 }
 func changePointer(j *int){
   v := 3
